@@ -136,4 +136,26 @@ public class StepDefHelper {
 		closeButton.click();
 	}
 
+	public static void inputAllBookingFieldsButNotBlank(ClientHomePage clientPage, String blank) {
+		if (!blank.equals("firstname")) {
+			clientPage.inputBookFirstname("Razvan");
+		}
+		if (!blank.equals("lastname")) {
+			clientPage.inputBookLastname("Testing");
+		}
+		if (!blank.equals("email")) {
+			clientPage.inputBookEmail("email@fake.co");
+		}
+		if (!blank.equals("phone")) {
+			clientPage.inputBookPhone("072121221234");
+		}
+		if (!blank.equals("days")) {
+			try {
+				selectNights(clientPage.getDriver(), "01", "02");
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
 }

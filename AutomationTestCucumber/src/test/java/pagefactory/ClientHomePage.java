@@ -49,6 +49,10 @@ public class ClientHomePage {
 		PageFactory.initElements(driver, this);
 	}
 
+	public WebDriver getDriver() {
+		return driver;
+	}
+
 	public void setLogoUrl() {
 		logoUrl = StepDefHelper.waitForElementCreation(driver, By.className("hotel-logoUrl"));
 	}
@@ -128,6 +132,22 @@ public class ClientHomePage {
 		WebElement section = driver.findElement(By.cssSelector(".col-sm-4"));
 		bookAfterSelectButton = section.findElements(By.tagName("button")).get(1);
 		bookAfterSelectButton.click();
+	}
+
+	public WebElement getBookFirstnameField() {
+		return bookFirstnameField;
+	}
+
+	public WebElement getBookLastnameField() {
+		return bookLastnameField;
+	}
+
+	public WebElement getBookEmailField() {
+		return bookEmailField;
+	}
+
+	public WebElement getBookPhoneField() {
+		return bookPhoneField;
 	}
 
 }

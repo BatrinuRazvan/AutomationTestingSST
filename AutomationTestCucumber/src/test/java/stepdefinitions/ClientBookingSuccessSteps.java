@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 import pagefactory.AdminLoginPage;
 import pagefactory.ClientHomePage;
 
-public class ClientBookingSuccess {
+public class ClientBookingSuccessSteps {
 
 	WebDriver driver;
 	AdminLoginPage loginPage;
