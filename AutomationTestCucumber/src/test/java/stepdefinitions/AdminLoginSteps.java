@@ -27,7 +27,7 @@ public class AdminLoginSteps {
 		loginPage.inputUsername("admin");
 		loginPage.inputPassword("password");
 
-		Thread.sleep(2000);
+		Thread.sleep(500);
 	}
 
 	@And("user clicks login")
@@ -38,7 +38,7 @@ public class AdminLoginSteps {
 	@Then("admin home page opens")
 	public void admin_home_page_opens() throws InterruptedException {
 		driver.findElement(By.className("navbar"));
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		driver.quit();
 	}
 
@@ -53,7 +53,7 @@ public class AdminLoginSteps {
 	public void input_fields_turn_red() throws InterruptedException {
 		WebElement loginButton = loginPage.getLoginButton();
 		loginButton.getAttribute("style").contains("red");
-		Thread.sleep(3000);
+		Thread.sleep(500);
 		driver.quit();
 	}
 

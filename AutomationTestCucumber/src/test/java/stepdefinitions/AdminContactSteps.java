@@ -40,9 +40,11 @@ public class AdminContactSteps {
 
 	@And("user navigates to client page")
 	public void user_navigates_to_client_page() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(500);
 		brandingPage.clickSubmit();
-		WebElement closeButton = StepDefHelper.waitForElementCreation(driver, By.cssSelector(".btn-outline-primary"));
+		Thread.sleep(500);
+		WebElement closeSction = StepDefHelper.waitForElementCreation(driver, By.className("ReactModal__Overlay"));
+		WebElement closeButton = closeSction.findElement(By.cssSelector(".btn"));
 		closeButton.click();
 		StepDefHelper.navigateTo(driver, "https://automationintesting.online/#");
 		contactSection = StepDefHelper.waitForElementCreation(driver, By.cssSelector(".contact"));
