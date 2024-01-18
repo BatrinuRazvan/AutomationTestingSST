@@ -21,8 +21,8 @@ Feature: Test Login as admin functionality
     When user enters username and valid password
     And user clicks login
     Then input fields turn red
-    
-    @loginFail
+
+  @loginFail
   Scenario: Login fails with invalid credentials
     Given user is on admin login page
     When user enters invalid username password

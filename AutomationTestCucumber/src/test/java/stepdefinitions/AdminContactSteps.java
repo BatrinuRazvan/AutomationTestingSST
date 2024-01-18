@@ -39,7 +39,8 @@ public class AdminContactSteps {
 	}
 
 	@And("user navigates to client page")
-	public void user_navigates_to_client_page() {
+	public void user_navigates_to_client_page() throws InterruptedException {
+		Thread.sleep(1000);
 		brandingPage.clickSubmit();
 		WebElement closeButton = StepDefHelper.waitForElementCreation(driver, By.cssSelector(".btn-outline-primary"));
 		closeButton.click();

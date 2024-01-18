@@ -15,18 +15,20 @@ public class AdminLogoutSteps {
 	AdminLoginPage loginPage;
 
 	@Given("user is logged in as admin")
-	public void user_is_logged_in_as_admin() {
+	public void user_is_logged_in_as_admin() throws InterruptedException {
 		driver = StepDefHelper.initBrowser(driver);
 		loginPage = new AdminLoginPage(driver);
 		adminHomePage = new AdminHomePage(driver);
 
 		StepDefHelper.loginAsAdmin(driver, loginPage);
+		Thread.sleep(1000);
 
 	}
 
 	@When("user clicks on logout button")
-	public void user_clicks_on_logout_button() {
+	public void user_clicks_on_logout_button() throws InterruptedException {
 		adminHomePage.clickLogout();
+		Thread.sleep(1000);
 	}
 
 	@Then("user is navigated to login page")

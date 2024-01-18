@@ -38,7 +38,7 @@ public class AdminLoginSteps {
 	@Then("admin home page opens")
 	public void admin_home_page_opens() throws InterruptedException {
 		driver.findElement(By.className("navbar"));
-		Thread.sleep(3000);
+		Thread.sleep(1000);
 		driver.quit();
 	}
 
